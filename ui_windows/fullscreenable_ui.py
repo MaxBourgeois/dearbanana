@@ -73,11 +73,7 @@ class FullscreenableUI:
             self.style_pushed = True
 
         opened, self.is_open = imgui.begin(title, self.is_open)
-        if self.win_is_focused:
-            print(imgui.get_window_dock_id())
-        # if not self.fullscreen:
-        #     self.orig_pos = imgui.get_window_pos()
-        #     self.orig_size = imgui.get_window_size()
+ 
         if self.is_open:
             self._update_docking_focus_state()
 

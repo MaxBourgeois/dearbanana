@@ -14,9 +14,9 @@ from typing import (
 
 from typing import Optional
 from imgui_bundle import imgui
-from logger_widgets import TableLogger
+from loggers.logger_widgets import TableLogger
 
-from fullscreenable_ui import FullscreenableUI
+from ui_windows.fullscreenable_ui import FullscreenableUI
 
 logger = logging.getLogger(__name__)
 

@@ -15,9 +15,9 @@ from typing import (
 
 from imgui_bundle import imgui, hello_imgui, imgui_color_text_edit
 from utils import Utils
-from logger_widgets import TextLogger
-from command_palette import AutoCompleteHelper
-from fullscreenable_ui import FullscreenableUI
+from loggers.logger_widgets import TextLogger
+from commands.command_palette import AutoCompleteHelper
+from ui_windows.fullscreenable_ui import FullscreenableUI
 
 logger = logging.getLogger(__name__)
 TextEditor = imgui_color_text_edit.TextEditor

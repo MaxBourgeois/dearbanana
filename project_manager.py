@@ -2,8 +2,8 @@ import json
 import logging
 from typing import Dict, Any, List
 
-from hooking_window import HookWindowUI
-from logger_widgets import TableLogEntry
+from ui_windows.hooking_window import HookWindowUI
+from loggers.logger_widgets import TableLogEntry
 from constants import DEFAULT_PROJECT_FILE
 
 logger = logging.getLogger(__name__)

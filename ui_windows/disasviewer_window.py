@@ -6,8 +6,8 @@ import frida
 from typing import Any, Dict, List, Optional, Tuple, Union
 from imgui_bundle import imgui
 
-from command_palette import AutoCompleteHelper
-from fullscreenable_ui import FullscreenableUI
+from commands.command_palette import AutoCompleteHelper
+from ui_windows.fullscreenable_ui import FullscreenableUI
 
 # Capstone for disassembly
 try:

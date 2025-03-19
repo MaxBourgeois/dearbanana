@@ -10,8 +10,8 @@ from typing import Any, Dict, Optional, List
 from imgui_bundle import imgui
 
 from utils import Utils
-from logger_widgets import TextLogger, TableLogEntry
-from global_logs_window import GlobalHooksLogUI
+from loggers.logger_widgets import TextLogger, TableLogEntry
+from loggers.global_logs_window import GlobalHooksLogUI
 
 logger: logging.Logger = logging.getLogger(__name__)
 
@@ -62,7 +62,7 @@ class FridaHook:
         Returns:
             str: The combined JavaScript code with inserted signatures and replacements.
         """
-        script_dir: str = "frida_scripts"
+        script_dir: str = "frida_agents"
         # Select the appropriate script based on module and function
         if module.lower() == "kernel32.dll" and function.lower() in ["createfilew", "readfile", "writefile"]:
             main_script: str = Utils.read_script_contents(os.path.join(script_dir, "hook_script_sig.js"))

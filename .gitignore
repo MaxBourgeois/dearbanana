@@ -1,2 +1,6 @@
 env/*
 .vscode/*
+**pycache**
+project.json
+assets/unused
+*.egg-info

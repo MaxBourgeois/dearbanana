@@ -2,8 +2,8 @@ import re
 import logging
 from typing import List, Dict, Optional, Any, Tuple
 
-from hooking_window import HookWindowUI
-from tests_add_hooks import set_editor_to_inject_for_test
+from ui_windows.hooking_window import HookWindowUI
+from e2e_tests.tests_add_hooks import set_editor_to_inject_for_test
 
 logger: logging.Logger = logging.getLogger(__name__)
 

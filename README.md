@@ -1,4 +1,4 @@
-<img src="./assets/banane_jaune_rayons.png" alt="LOGO banana" width="200"/>
+<img src="./assets/yellow_banana_ray.png" alt="LOGO banana" width="200"/>
 
 ---
 

@@ -11,22 +11,22 @@ from typing import List, Dict, Optional, Any, Callable, Tuple
 from imgui_bundle import imgui, hello_imgui
 
 from utils import Utils
-from command_palette import Command, CommandPalette
-from logger_widgets import TableLogEntry
-from global_logs_window import GlobalHooksLogUI
-from frida_console_window import FridaConsoleUI
-from hexviewer_window import HexViewerUI
-from disasviewer_window import DisasViewerUI
-from hooking_window import HookWindowUI
+from commands.command_palette import Command, CommandPalette
+from loggers.logger_widgets import TableLogEntry
+from loggers.global_logs_window import GlobalHooksLogUI
+from ui_windows.frida_console_window import FridaConsoleUI
+from ui_windows.hexviewer_window import HexViewerUI
+from ui_windows.disasviewer_window import DisasViewerUI
+from ui_windows.hooking_window import HookWindowUI
 from themes import ALL_THEMES, ALL_THEMES_NAMES
 
-from hook_window_manager import HookWindowManager
+from ui_windows.hook_window_manager import HookWindowManager
 from project_manager import ProjectManager
-from frida_interaction import FridaHandler  # modified version with ProcessInfo, etc.
-from command_palettes_manager import PaletteManager
+from frida_interaction import FridaHandler
+from commands.command_palettes_manager import PaletteManager
 
 # Tests (for development/testing purposes)
-from tests_add_hooks import test_command_palette_sequence, set_editor_to_inject_for_test
+from e2e_tests.tests_add_hooks import test_command_palette_sequence, set_editor_to_inject_for_test
 
 logger: logging.Logger = logging.getLogger(__name__)
 
@@ -480,7 +480,7 @@ class FridaHookManagerApp:
             banana_w: float = 552 / 25
             banana_h: float = 408 / 25
             try:
-                self.banana_texture_id = hello_imgui.im_texture_id_from_asset("banane_jaune.png")
+                self.banana_texture_id = hello_imgui.im_texture_id_from_asset("yellow_banana.png")
                 imgui.set_cursor_pos((banana_w / 2, (win_size.y - banana_h) / 2))
                 imgui.image(self.banana_texture_id, imgui.ImVec2(banana_w, banana_h), tint_col=(1, 1, 1, 0.5))
             except Exception:
@@ -541,7 +541,7 @@ class FridaHookManagerApp:
         center_x: float = (vp_width - banana_w_bg) / 2
         center_y: float = (vp_height - banana_h_bg) / 2
         try:
-            self.banana_texture_id = hello_imgui.im_texture_id_from_asset("banane_jaune_rayons.png")
+            self.banana_texture_id = hello_imgui.im_texture_id_from_asset("yellow_banana_ray.png")
             imgui.set_cursor_pos((center_x, center_y))
             imgui.image(self.banana_texture_id, imgui.ImVec2(banana_w_bg, banana_h_bg), tint_col=(1, 1, 1, 0.2))
         except Exception:

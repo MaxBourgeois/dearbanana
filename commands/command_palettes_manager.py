@@ -1,11 +1,11 @@
 # ui_palettes.py
 from typing import List, Optional, Any, Callable
-from command_palette import CommandPalette
+from commands.command_palette import CommandPalette
 from constants import HookChainStep, WindowToggleOption
 from themes import ALL_THEMES, ALL_THEMES_NAMES
 import logging, sys
 from imgui_bundle import hello_imgui, imgui
-import tests_add_hooks
+import e2e_tests.tests_add_hooks as tests_add_hooks
 import threading
 
 logger: logging.Logger = logging.getLogger(__name__)

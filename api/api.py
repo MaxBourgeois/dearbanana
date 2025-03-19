@@ -1,6 +1,6 @@
 from typing import Any, Dict, List, Optional
 from app import FridaHookManagerApp
-from hook_window_manager import HookWindowManager
+from ui_windows.hook_window_manager import HookWindowManager
 
 class HookNotFoundError(Exception):
     pass
