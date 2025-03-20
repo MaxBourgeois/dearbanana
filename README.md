@@ -49,7 +49,7 @@
 **Install the Dependencies:**
 
    ```bash
-   pip install -r requirements.txt
+   pip install .
    ```
 
 On linux, to be able to install imgui_bundle before the previous command run :
@@ -70,7 +70,7 @@ export LIBGL_ALWAYS_SOFTWARE=1
 Run the application using:
 
 ```bash
-python __init__.py
+python -m dearbanana
 ```
 
 This will launch the graphical interface in a window titled **"0xDearBanana"**.

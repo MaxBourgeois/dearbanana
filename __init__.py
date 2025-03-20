@@ -2,6 +2,6 @@
 
 from app import FridaHookManagerApp
 from api.api import FridaHookManagerAPI
-from main import main
+from dearbanana import main
 
 main()
